@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<body background="hotdog.png;";>>
+	<h1 style="text-align:center" position=fixed>WELCOME TO JOE'S HOTDOGS!!</h1>
+	<br>
+	<script language="javascript">
+		
+		var int;
+		var hotdogs = prompt("Welcome to Joe's Hotdogs!\nHow many hotdogs would you like?");
+		var fries = prompt("How many french fries would you like?");
+		var drinks = prompt("How many drinks would you like?");
+
+		var price = (hotdogs * 3.75) + (fries * 2.00) + (drinks * 1.50);
+
+		if (price > 20.01) {
+			var total_price = (price * .9);
+			var discount = (price * .1);
+			discount = discount.toFixed(2);
+		} else {
+			total_price = price;
+			var discount = 0.00;
+		}
+		total_price = total_price.toFixed(2);
+		var total_price_after_tax = (total_price * 1.0625);
+		var tax = total_price_after_tax - total_price;
+		tax = tax.toFixed(2);
+		total_price_after_tax = total_price_after_tax.toFixed(2);
+
+		document.write("You ordered: " + hotdogs + " hotdogs, " + fries + " french fries, and " + drinks + " drinks for a total price of $" + total_price_after_tax + ". ");
+		document.write("<br>");
+		document.write("The price before tax was $" + total_price + ". The tax you paid was $" + tax + ". ");
+		document.write("<br>");
+		document.write("The discount you received was $" + discount + ". ");
+
+
+
+	</script>
+
+
+</body>
+</html>
